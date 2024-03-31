@@ -1,4 +1,4 @@
- /**
+/**
  * Definition for singly-linked list.
  * struct ListNode {
  *     int val;
@@ -11,27 +11,36 @@
 class Solution {
 public:
     int numComponents(ListNode* head, vector<int>& nums) {
-        int c=0;
+        unordered_map<int,ListNode*> m;
         ListNode* temp=head;
-        unordered_map<int,int> mp;
-
-        for(auto i:nums){
-            mp[i]++;
+        while(temp!=NULL){
+            m[temp->val]=temp->next;
+            temp=temp->next;
         }
-         
-         while(temp!=NULL){
-            if(mp.find(temp->val)!=mp.end()){
-                 if(temp->next){
-                    if(mp.find(temp->next->val)==mp.end()){
-                       c++;
-                    }
-                }else{
-                   c++;
-                }
-            }
-             temp=temp->next;
-       }
+        unordered_set<int> s;
+        for(auto ele : nums){
+            s.insert(ele);
+        }
 
-        return c;
+        int count=0;
+        ListNode* nex=head;
+        bool find=false;
+        while(s.size()>0){
+            if(s.find(nex->val)!=s.end()){
+                find=true;
+                s.erase(nex->val);
+            }else{
+                if(find==true) count++;
+                find=false;
+            }
+            nex=m[nex->val];
+        }
+
+        if(find==true){
+            return count+1;
+        }
+
+        
+        return count;
     }
 };
