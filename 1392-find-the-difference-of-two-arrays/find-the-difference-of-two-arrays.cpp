@@ -12,9 +12,9 @@ public:
         for(auto ele : q){
             if(p.find(ele)==p.end())  second.push_back(ele); 
         }
-        vector<vector<int>> ans={first,second};
+        // vector<vector<int>> ans={first,second};
         // ans.push_back(first);
         // ans.push_back(second);
-        return ans;
+        return {first,second};
     }
 };
