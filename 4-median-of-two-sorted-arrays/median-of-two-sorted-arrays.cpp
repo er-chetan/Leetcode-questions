@@ -7,40 +7,28 @@ public:
         int i=0,j=0,k=0;
         if(n==0){
             while(j<m){
-                v[k]=nums2[j];
-                k++;
-                j++;
+                v[k++]=nums2[j++];
             }
         }else if(m==0){
             while(i<n){
-                v[k]=nums1[i];
-                k++;
-                i++;
+                v[k++]=nums1[i++];
             }
         }else{
                 while(i<n && j<m){
                 if(nums1[i]<=nums2[j]){
-                    v[k]=nums1[i];
-                    k++;
-                    i++;
+                    v[k++]=nums1[i++];
                 }else{
-                    v[k]=nums2[j];
-                    k++;
-                    j++;
+                    v[k++]=nums2[j++];
                 }
 
                 if(i==n){
                     while(j<m){
-                        v[k]=nums2[j];
-                        k++;
-                        j++;
+                        v[k++]=nums2[j++];
                     }
                 }
                 if(j==m){
                     while(i<n){
-                        v[k]=nums1[i];
-                        k++;
-                        i++;
+                        v[k++]=nums1[i++];
                     }
                 } 
             }
