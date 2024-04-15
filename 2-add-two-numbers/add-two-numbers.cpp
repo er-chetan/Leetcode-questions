@@ -22,7 +22,6 @@ public:
             len2++;
             temp2=temp2->next;
         }
-        cout<<len1<<" "<<len2;
         int carry=0,sum=0;
         ListNode *ltemp,*stemp,*store,*last;
         if(len1>len2){
