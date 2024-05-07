@@ -39,13 +39,13 @@ public:
                 }
             }
         }
-        vector<int> g;
-        for(auto ele : ans) g.push_back(ele-'0');
-        sort(g.begin(),g.end());
-        ans="";
-        for(auto ele : g) ans+=to_string(ele);
+        // vector<int> g;
+        // for(auto ele : ans) g.push_back(ele-'0');
+        // sort(g.begin(),g.end());
+        // ans="";
+        // for(auto ele : g) ans+=to_string(ele);
 
-
+        sort(ans.begin(),ans.end());
         return ans;
     }
 };
