@@ -16,14 +16,14 @@ public:
             v.push_back(p);
         }
         sort(v.begin(),v.end(),cmp);
-        for(int i=0;i<v.size();i++){
+        for(int i=0;i<v.size() && truckSize!=0 ;i++){
             pair<int,int> temp=v[i];
             if(temp.second<truckSize){
                 result+=(temp.second*temp.first);
                 truckSize-=temp.second;
             }else{
                 result+=(truckSize*temp.first);
-                break;
+                truckSize=0;
             }
         }
         return result;
