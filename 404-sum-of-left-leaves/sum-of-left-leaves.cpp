@@ -9,25 +9,22 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
 class Solution {
 public:
-void solve(TreeNode* &root,int &ans){
-    if(root==NULL){
-        return;
+    int sum=0;
+    void helper(TreeNode* root){
+        if(root==NULL) return;
+        if(root->left!=NULL && (root->left->left==NULL && root->left->right==NULL)){
+            cout<<"root - "<<root->val<<" ";
+            sum+=root->left->val;
+            cout<<sum<<" ";
+        }
+        helper(root->left);
+        helper(root->right);
     }
-        if(root->left!=NULL){
-            if(root->left->left==NULL && root->left->right==NULL){
-                ans=ans+root->left->val;
-            }
-            
-        } 
-        solve(root->left,ans);
-        solve(root->right,ans);
-
-}
     int sumOfLeftLeaves(TreeNode* root) {
-        int ans=0;
-           solve(root,ans);
-           return ans;
+        helper(root);
+        return sum;
     }
 };
