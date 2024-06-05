@@ -15,11 +15,7 @@ public:
     int sum=0;
     void helper(TreeNode* root){
         if(root==NULL) return;
-        if(root->left!=NULL && (root->left->left==NULL && root->left->right==NULL)){
-            cout<<"root - "<<root->val<<" ";
-            sum+=root->left->val;
-            cout<<sum<<" ";
-        }
+        if(root->left!=NULL && (root->left->left==NULL && root->left->right==NULL)) sum+=root->left->val;
         helper(root->left);
         helper(root->right);
     }
