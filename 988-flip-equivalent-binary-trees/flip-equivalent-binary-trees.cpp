@@ -5,8 +5,7 @@ public:
         if(root1 == NULL || root2 == NULL){
             return root1 == root2;
         }
-        
-        //check condition fourth
+    
         if(root1->val != root2->val){
             return 0;
         }
