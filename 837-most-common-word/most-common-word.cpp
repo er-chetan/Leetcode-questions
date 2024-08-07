@@ -5,16 +5,9 @@ public:
         string s="";
 
         for(int i=0;i<para.size();i++){
-            if(isalpha(para[i])){
-                s+=tolower(para[i]);
-            }
+            if(isalpha(para[i])) s+=tolower(para[i]);
             if(!isalpha(para[i]) || i==para.size()-1){
-                // cout<<s<<" ";
-                
-                if(s!=""){
-                    m[s]++;
-                }
-                
+                if(s!="")  m[s]++;
                 s="";
             }
         }
