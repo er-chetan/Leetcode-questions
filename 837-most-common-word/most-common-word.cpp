@@ -19,25 +19,9 @@ public:
             }
         }
 
-         
-
-        for(auto ele : m){
-            cout<<ele.first<<" "<<ele.second<<endl;
-            if(ele.first==""){
-                // cout<<"yes"<<" ";
-            }
-        }
-        // m.erase(" ");
-        cout<<"after !!!!!!"<<endl;
         for(int i=0;i<banned.size();i++){
             m.erase(banned[i]);
         }
-
-         for(auto ele : m){
-            cout<<ele.first<<" "<<ele.second<<endl;
-        }
-
-        
         int maxi=INT_MIN;
         string str="";
         for(auto ele : m){
@@ -46,7 +30,6 @@ public:
                 str=ele.first;
             }
         }
-        
 
         return str;
     }
