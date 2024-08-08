@@ -15,14 +15,6 @@ public:
         }
 
         for(auto ele : m){
-            cout<<ele.first<<" = "<<ele.second<<" ";
-        }
-        cout<<endl<<endl;
-        for(auto ele : m2){
-            cout<<ele.first<<" = "<<ele.second<<" ";
-        }
-
-        for(auto ele : m){
             if(m2.find(ele.first)!=m2.end()){
                 if(ele.second!=m2[ele.first]){
                     return false;
