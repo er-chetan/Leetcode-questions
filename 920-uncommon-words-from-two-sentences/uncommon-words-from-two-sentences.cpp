@@ -24,31 +24,20 @@ public:
                 str="";
             }   
         }
-
-        // for(auto ele : m1){
-        //     cout<<ele.first<<" "<<ele.second<<endl;
-        // }
-
-        // for(auto ele : m1){
-        //     cout<<ele.first<<" "<<ele.second<<endl;
-        // }
+ 
 
         vector<string> v;
         for(auto ele : m1){
             if(m2.find(ele.first)==m2.end()){
                 if(ele.second==1){
-                    cout<<ele.first<<" "<<ele.second<<endl;
                     v.push_back(ele.first);
                 }
             }
         }
 
-        cout<<endl;
-
         for(auto ele : m2){
             if(m1.find(ele.first)==m1.end()){
                 if(ele.second==1){
-                    cout<<ele.first<<" "<<ele.second<<endl;
                     v.push_back(ele.first);
                 }
             }
