@@ -6,7 +6,6 @@ public:
         for(int i=0;i<26;i++){
             m[char(97+i)]=v[i];
         }
-        cout<<endl;
         unordered_set<string> st;
         for(int i=0;i<words.size();i++){
             string str=words[i];
@@ -15,10 +14,6 @@ public:
                 s+=m[str[j]];
             }
             st.insert(s);
-        }
-
-        for(auto ele : st){
-            cout<<ele<<" ";
         }
 
 
