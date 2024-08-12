@@ -22,15 +22,12 @@ public:
         pair<int,int>rightsum=helper(root->right,sum,freq);
         freq++;
         sum+=root->val;
-        // cout<<count<<" "<<freq<<" "<<avrg<<endl;
         int totalfreq=freq+leftsum.second+rightsum.second;
         int avrg=(sum+leftsum.first+rightsum.first)/totalfreq;
-        // cout<<sum<<" "<<leftsum.first<<" "<<rightsum.first<<" "<<totalfreq<<"->"<<avrg<<endl;
         if(avrg==root->val){
             count++;
             cout<<count<<" ";
         }
-        // cout<<count<<" "<<freq<<" "<<avrg<<endl;
         return {sum+leftsum.first+rightsum.first,totalfreq};
     }
     int averageOfSubtree(TreeNode* root) {
