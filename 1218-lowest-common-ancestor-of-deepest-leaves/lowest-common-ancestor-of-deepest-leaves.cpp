@@ -23,16 +23,13 @@ public:
             if(maxdep<=left){
                 temp=root;
                 maxdep=left;
-                // cout<<temp->val<<"="<<left<<"+"<<right<<" ";
             } 
         }else if(left>right  && maxdep<left){
             maxdep=left;
             temp=root->left;
-            // cout<<temp->val<<"="<<left<<"+"<<right<<" ";
         }else if(left<right && maxdep<right){
             maxdep=right;
             temp=root->right;
-            // cout<<temp->val<<"="<<left<<"+"<<right<<" ";
         } 
         return max(left,right);
     }
