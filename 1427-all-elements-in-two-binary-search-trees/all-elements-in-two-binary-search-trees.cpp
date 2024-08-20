@@ -18,44 +18,11 @@ public:
         inorder(root->right,v);
     }
     vector<int> getAllElements(TreeNode* root1, TreeNode* root2) {
-        vector<int> v1,v2;
-        inorder(root1,v1);
-        inorder(root2,v2);
+        vector<int> ans;
+        inorder(root1,ans);
+        inorder(root2,ans);
 
-        vector<int> ans(v1.size()+v2.size(),0);
-        
-        int i=0;
-        int j=0;
-        int k=0;
-        while(i<v1.size() && j<v2.size()){
-            if(v1[i]<v2[j]){
-                ans[k]=v1[i];
-                cout<<ans[k]<<" ";
-                i++;
-                k++;
-            }else{
-                ans[k]=v2[j];
-                cout<<ans[k]<<" ";
-                j++;
-                k++;
-            }
-        }
-
-        if(i<v1.size()){
-            while(i<v1.size()){
-                ans[k]=v1[i];
-                i++;
-                k++;
-            }
-        }
-        if(j<v2.size()){
-            while(j<v2.size()){
-                ans[k]=v2[j];
-                j++;
-                k++;
-            }
-        }
-
+        sort(ans.begin(),ans.end());
        return ans; 
 
     }
