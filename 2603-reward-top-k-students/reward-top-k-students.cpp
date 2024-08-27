@@ -1,48 +1,49 @@
+
 class Solution {
 public:
-    vector<int> topStudents(vector<string>& p, vector<string>& n, vector<string>& report, vector<int>& id, int k) {
-        unordered_map<string, int>pos, neg;
-        for(int i=0; i<p.size(); i++){
-            pos[p[i]]++;
+    
+    vector<int> topStudents(vector<string>& positive_feedback, vector<string>& negative_feedback, vector<string>& report, vector<int>& student_id, int k) {
+        unordered_map<string,int> m;
+        for(auto ele : positive_feedback){
+            m[ele]=3;
         }
-        for(int i=0; i<n.size(); i++){
-            neg[n[i]]++;
+        for(auto ele : negative_feedback){
+            m[ele]=-1;
         }
-        priority_queue<pair<int, int>>v;
-        for(int i=0; i<id.size(); i++){
-            int cnt=0;
-            stringstream s(report[i]);
-            while(getline(s, report[i], ' ')){
-                //cout<<report[i]<<endl;
-                if(pos.find(report[i])!=pos.end()){
-                    cnt+=3;
+        
+        priority_queue<pair<int,int>> pq;
+
+        for(int i=0;i<report.size();i++){
+            string temp=report[i];
+            string str="";
+            int count=0;
+            for(int j=0;j<temp.size();j++){
+                if(temp[j]!=' '){
+                    str+=temp[j];
                 }
-                if(neg.find(report[i])!=neg.end()){
-                    cnt--;
+                if((temp[j]==' ' || j==temp.size()-1) ){
+                    cout<<str<<" ";
+                    if(m.find(str)!=m.end()){
+                        count+=m[str];
+                    }
+                    str="";
                 }
             }
-            v.push({cnt, id[i]});
+            cout<<count<<" ";
+            pq.push({count,-student_id[i]});
+            count=0;
         }
-        vector<int>ans;
-        int prev=-1, cnt=0;
-        while(!v.empty()){
-            if(prev==v.top().first){
-                cnt++;
-            }
-            else{
-                cnt=0;
-            }
-            prev=v.top().first;
-            if(ans.empty()){ans.push_back(v.top().second);}
-            else{
-                ans.insert(ans.begin()+ans.size()-cnt, v.top().second);
-            }
-            v.pop();
+
+        vector<int> v;
+        cout<<"\nyes"<<endl;;
+        while(k--){
+            cout<<pq.top().first<<" "<<pq.top().second<<endl;;
+            v.push_back(-pq.top().second);
+            pq.pop();
         }
-        vector<int>a;
-        for(int i=0; i<k; i++){
-            a.push_back(ans[i]);
-        }
-        return a;
+        
+        
+
+        return v;
     }
 };
