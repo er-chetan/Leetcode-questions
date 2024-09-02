@@ -27,7 +27,6 @@ public:
                     return false;
                 }
                 q.pop();
-                // prev=temp->val;
                 if(level%2==0 && level>0){
                     cout<<"even"<<" ";
                     if(prev>=temp->val && i!=0){
