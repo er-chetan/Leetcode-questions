@@ -34,7 +34,6 @@ public:
             }
             depth++;
         }
-    cout<<depth;
         return depth;
     }
 };
