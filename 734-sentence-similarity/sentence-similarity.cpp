@@ -9,9 +9,9 @@ public:
        for(int i=0;i<similarPairs.size();i++){
         s.insert({similarPairs[i][0],similarPairs[i][1]});
        }
-       for(int i=0;i<similarPairs.size();i++){
-        s.insert({similarPairs[i][1],similarPairs[i][0]});
-       }
+    //    for(int i=0;i<similarPairs.size();i++){
+    //     s.insert({similarPairs[i][1],similarPairs[i][0]});
+    //    }
     
         int count=0;
        for(int i=0;i<sentence1.size();i++){
