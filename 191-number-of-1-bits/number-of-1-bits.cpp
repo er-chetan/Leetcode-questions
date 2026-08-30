@@ -1,11 +1,23 @@
 class Solution {
 public:
-    int hammingWeight(int n) {
-        int sum = 0;
-    while (n != 0) {
-        sum++;
-        n &= (n - 1);
+    int count=0;
+    void bits(int n){
+        if(n<=1){
+            count++;
+            return;
+        }
+
+        if(n%2==0){
+            return bits(n/2);
+        }else{
+            count++;
+            cout<<count<<" ";
+            return bits(n/2);
+        }
+        
     }
-    return sum;
+    int hammingWeight(int n) {
+        bits(n);
+        return count;
     }
 };
