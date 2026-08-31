@@ -2,7 +2,7 @@ class Solution {
 public:
     string toGoatLatin(string S) {
         unordered_set<char> vowel({'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'});
-        int n =S.size(),i=0;
+        int n =S.size();
         stringstream s(S);
         string temp,res;
         int count=0;
