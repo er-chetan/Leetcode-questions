@@ -8,7 +8,6 @@ public:
         int count=0;
         while(s>> temp){
             count++;
-
             if(vowel.find(temp[0])!=vowel.end()){
                 temp=temp+"ma";
             }else{
@@ -26,11 +25,6 @@ public:
         }
 
         res.pop_back();
-       
-       cout<<res;
-
-       
-
         return res;
     }
 };
