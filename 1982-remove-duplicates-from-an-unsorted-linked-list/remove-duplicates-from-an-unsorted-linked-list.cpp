@@ -29,23 +29,16 @@ public:
         if(firsthead==false) return NULL;
         int size=0;
         temp=head;
-        // cout<<"start"<<endl;
         ListNode* fh;
         while(temp!=NULL){
-            // cout<<temp->val<<" ";
             if(m[temp->val]==1){
                 size++;
                 if(size==1){
                     fh=temp;
                     prev=fh;
-                    // prev->next=NULL;
-                    // cout<<prev->val;
                 }else{
-                    // cout<<prev->val;
                     prev->next=temp;
                     prev=prev->next;
-                    // cout<<prev->val;
-                    // prev->next=NULL;
                 }
             }
             temp=temp->next;
