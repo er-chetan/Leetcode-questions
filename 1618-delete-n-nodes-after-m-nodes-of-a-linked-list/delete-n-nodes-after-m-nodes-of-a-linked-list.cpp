@@ -19,7 +19,6 @@ public:
             if(m1!=0){
                 m1--;
                 connect=temp;
-                // if(m1==0)
             }else if(m1==0){
                 connect->next= NULL;
                 if(n1!=0){
@@ -29,7 +28,6 @@ public:
                         m1=m;
                         if(temp!=NULL && connect!=NULL){
                             connect->next=temp->next;
-                            // cout<<temp->next->val;
                         }
                     }
                 }
