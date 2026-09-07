@@ -18,15 +18,15 @@ public:
             m[temp->val]++;
             temp=temp->next;
         }
-        // bool firsthead=false;
-        // for (auto ele : m){
-        //     if(ele.second==1){
-        //         firsthead=true;
-        //         break;
-        //     }
-        // }
+        bool firsthead=false;
+        for (auto ele : m){
+            if(ele.second==1){
+                firsthead=true;
+                break;
+            }
+        }
 
-        // if(firsthead==false) return NULL;
+        if(firsthead==false) return NULL;
         int size=0;
         temp=head;
         // cout<<"start"<<endl;
