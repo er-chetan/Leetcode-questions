@@ -39,12 +39,12 @@ public:
                     fh=temp;
                     prev=fh;
                     // prev->next=NULL;
-                    cout<<prev->val;
+                    // cout<<prev->val;
                 }else{
                     // cout<<prev->val;
                     prev->next=temp;
                     prev=prev->next;
-                    cout<<prev->val;
+                    // cout<<prev->val;
                     // prev->next=NULL;
                 }
             }
