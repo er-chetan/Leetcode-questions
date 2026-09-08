@@ -10,13 +10,11 @@ public:
             }
         }
 
-    // cout<<"max:"<<max<<endl;
         vector<int> v;
         int value;
         for(auto ele : m){
             if(ele.second!=1){
                 value=ele.first;
-                cout<<"yes";
                 v.push_back(ele.first);
                 break;
             }
@@ -34,6 +32,7 @@ public:
         for(int i=value+1;i<=max;i++){
             if(m.find(i)==m.end()){
                 v.push_back(i);
+                break;
             }
         }
 
