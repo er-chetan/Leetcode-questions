@@ -32,9 +32,7 @@ public:
     vector<int> preorder(Node* root) {
         vector<int> v;
         helper(root,v);
-        for(int i=0;i<v.size();i++){
-            cout<<v[i]<<" ";
-        }
+        
 
         return v;
     }
