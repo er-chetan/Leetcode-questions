@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    long long count=0;
+    int count=0;
     long long helper(TreeNode* root,long long sum){
         if(root==NULL){
             return 0;
