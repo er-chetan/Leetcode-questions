@@ -18,19 +18,16 @@ public:
     }
     int reverseBits(int n) {
         int a=helper(n);
-        // cout<<ans.size()<<" ";
         int size=32-ans.size();
 
         for(int i=1;i<=size;i++){
             ans+="0";
         }
-        // cout<<ans<<endl;
         int num=0;
         int bit=31;
         for(int i=0;i<ans.size();i++){
             int n1=(ans[i]-'0')*pow(2,bit);
             bit--;
-            // cout<<n1<<" ";
             num=num+n1;
         }
         return num;
