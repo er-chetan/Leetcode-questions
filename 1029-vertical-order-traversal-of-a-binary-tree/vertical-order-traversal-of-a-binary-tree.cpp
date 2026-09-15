@@ -37,10 +37,10 @@ public:
             }
 
             if(check==pr.first){
-                cout<<"yes";
                 // for(int r=0;r<vec.size();r++){
                 //     res[i-1].push_back(vec[r]);
                 // }
+                // use this instead of loop in 2d vector particular vector push back values of another vectot // we can say that push bacck whole vector in inner particular vector
                 res[i-1].insert(res[i-1].end(),vec.begin(),vec.end());
             }else{
                 
