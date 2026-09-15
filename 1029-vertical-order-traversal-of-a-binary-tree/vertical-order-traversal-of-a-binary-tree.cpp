@@ -38,9 +38,10 @@ public:
 
             if(check==pr.first){
                 cout<<"yes";
-                for(int r=0;r<vec.size();r++){
-                    res[i-1].push_back(vec[r]);
-                }
+                // for(int r=0;r<vec.size();r++){
+                //     res[i-1].push_back(vec[r]);
+                // }
+                res[i-1].insert(res[i-1].end(),vec.begin(),vec.end());
             }else{
                 res.push_back(vec);
                 check=pr.first;
