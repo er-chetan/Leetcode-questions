@@ -32,14 +32,10 @@ public:
 
         int check=INT_MIN,i=0;
         for(auto [pr,vec] : m){
-            cout<<pr.first<<" "<<pr.second<<" -> "<<check<<" "<<i<<" ";
             if(vec.size()>0){
                 sort(vec.begin(),vec.end());
             }
 
-            for(auto ele : vec){
-                cout<<ele<<" ";
-            }
             if(check==pr.first){
                 cout<<"yes";
                 for(int r=0;r<vec.size();r++){
@@ -50,18 +46,7 @@ public:
                 check=pr.first;
                 i++;
             }
-
-            cout<<endl;
-            
         }
-
-        cout<<"check result vector --:"<<endl;
-
-        // for(int i=0;i<res.size();i++){
-        //     for(int j=0;i<res[0].size();j++){
-        //         cout<<res[i][j]<<" ";
-        //     }
-        // }
         return res;
     }
 };
