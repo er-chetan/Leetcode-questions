@@ -12,9 +12,6 @@ public:
             }
         }
 
-        for(auto ele :v){
-            cout<<ele<<" ";
-        }
 
         return v;
     }
