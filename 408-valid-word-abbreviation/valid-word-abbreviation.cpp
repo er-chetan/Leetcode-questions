@@ -15,22 +15,16 @@ public:
                 find=true;
                 continue;
             }else if(find==true){
-                // cout<<str<<" ";
                 if(str[0]=='0') return false;
                 int num = atoi(str.c_str());
-                cout<<num<<" ";
                 i=i+num;
                 if(i>word.size()) return false;
                 str="";
                 find=false;
             }
 
-            if(word[i]!=abbr[j]){
-                cout<<"y";
-                return false;
-            }else{
-                i++;
-            }
+            if(word[i]!=abbr[j]) return false;
+            else i++;
             j++;
             
         }
@@ -38,10 +32,7 @@ public:
             if(str[0]=='0') return false;
             i=i+atoi(str.c_str());
         }
-        if(j!=abbr.size() || i!=word.size()){
-            cout<<"y";
-            return false;
-        }
+        if(j!=abbr.size() || i!=word.size()) return false;
         
 
         return true;
