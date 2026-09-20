@@ -23,11 +23,11 @@ public:
                 
                 if(m.find(items[i][0])!=m.end()){
                     m[items[i][0]]+=items[i][1];
-                    cout<<m[items[i][0]]<<" "<<items[i][0]<<endl;
+                    // cout<<m[items[i][0]]<<" "<<items[i][0]<<endl;
                     count++;
                 }else if(count==0 && m.find(items[i][0])==m.end()) {
                     m[items[i][0]]=items[i][1];
-                    cout<<m[items[i][0]]<<" "<<items[i][0]<<endl;
+                    // cout<<m[items[i][0]]<<" "<<items[i][0]<<endl;
                     count++;    
                 }
 
