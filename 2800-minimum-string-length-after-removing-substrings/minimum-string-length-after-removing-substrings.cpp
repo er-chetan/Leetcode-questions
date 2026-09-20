@@ -2,7 +2,6 @@ class Solution {
 public:
     int minLength(string s) {
         stack<char> st;
-        // s.push(s[0]);
         string ans="";
         for(int i=0;i<s.size();i++){
             if(s[i]=='A' || s[i]=='C'){
