@@ -25,7 +25,6 @@ public:
         ListNode* newhead=NULL;
 
         for(auto ele : m){
-            // cout<<ele.first<<" "<<ele.second<<endl;
             ListNode* newnode=new ListNode(ele.second);
             if(newhead==NULL){
                 newhead=newnode;
@@ -35,13 +34,6 @@ public:
                 temp=temp->next;
             }
         }
-
-        // temp=newhead;
-
-        // while(temp!=NULL){
-        //     // cout<<temp->val<<" ";
-        //     temp=temp->next;
-        // }
 
         return newhead;
     }
