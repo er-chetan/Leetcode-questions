@@ -29,7 +29,7 @@ public:
         vector<int> ans;
         helper(root,target);
         while(pq.size()>0){
-            cout<<pq.top().first<<" "<<pq.top().second<<endl;
+            // cout<<pq.top().first<<" "<<pq.top().second<<endl;
             ans.push_back(pq.top().second);
             pq.pop();
             k--;
