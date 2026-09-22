@@ -17,11 +17,11 @@ public:
                     
                     prev=m[word[i]];
                     sum=prev;
-                    cout<<sum<<" "<<prev<<endl;
+                    // cout<<sum<<" "<<prev<<endl;
                 }else{
                     sum=sum+abs(prev-m[word[i]]);
                     prev=m[word[i]];
-                    cout<<sum<<" "<<m[word[i]]<<endl;
+                    // cout<<sum<<" "<<m[word[i]]<<endl;
                 }
             }
 
