@@ -21,7 +21,7 @@ public:
         int R=helper(root->right,left,right);
         // total=total+L+R;
         sum=sum+abs(L-R);
-        cout<<L<<" "<<R<<" "<<sum<<endl;
+        // cout<<L<<" "<<R<<" "<<sum<<endl;
         
         return root->val+L+R;
     }
