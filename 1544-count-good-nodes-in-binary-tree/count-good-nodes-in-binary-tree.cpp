@@ -16,20 +16,16 @@ public:
         if(root==NULL){
             return ;
         }
-
         if(root->val>=maxi){
             maxi=root->val;
             count++;
         }
-
         helper(root->left,maxi);
         helper(root->right,maxi);
 
     }
     int goodNodes(TreeNode* root) {
         helper(root,INT_MIN);
-
-        // cout<<count;
         return count;
     }
 };
