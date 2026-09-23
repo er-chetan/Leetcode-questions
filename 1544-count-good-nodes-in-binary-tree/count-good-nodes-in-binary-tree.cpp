@@ -29,7 +29,7 @@ public:
     int goodNodes(TreeNode* root) {
         helper(root,INT_MIN);
 
-        cout<<count;
+        // cout<<count;
         return count;
     }
 };
