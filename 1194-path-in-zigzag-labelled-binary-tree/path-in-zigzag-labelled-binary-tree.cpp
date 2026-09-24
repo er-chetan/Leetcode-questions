@@ -8,14 +8,14 @@ public:
                 height++;
             }
         }
-        cout<<height<<" h";
+        // cout<<height<<" h";
         // h--
         ans.push_back(label);
         while(height){
             int mini_value=pow(2,height-1);// previous level
             int maxi_value=pow(2,height)-1;// previous level
             label=mini_value+maxi_value-(label/2);
-            cout<<label<<" ";
+            // cout<<label<<" ";
             ans.push_back(label);
             height--;
         }
