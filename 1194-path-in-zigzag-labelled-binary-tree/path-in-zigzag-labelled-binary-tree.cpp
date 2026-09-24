@@ -1,13 +1,13 @@
 class Solution {
 public:
     vector<int> pathInZigZagTree(int label) {
-        int height=0;
+        int height=log2(label);
         vector<int> ans;
-        for(int i=1;i<label;i++){
-            if(label>=pow(2,i)){
-                height++;
-            }
-        }
+        // for(int i=1;i<label;i++){
+        //     if(label>=pow(2,i)){
+        //         height++;
+        //     }
+        // }
         // cout<<height<<" h";
         // h--
         ans.push_back(label);
