@@ -21,12 +21,12 @@ public:
             // }
 
             if(m.size()==k && m[s[i]]==1){
-                cout<<s[i]<<" "<<m.size()<<endl;
+                // cout<<s[i]<<" "<<m.size()<<endl;
                 count++;
             }
         }
 
-        cout<<count;
+        // cout<<count;
 
         return count;
     }
