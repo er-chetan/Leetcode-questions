@@ -35,7 +35,7 @@ public:
             int j=1;
             int i=n+k;
             while(j<n){
-                cout<<sum<<" "<<code[i]<<" "<<code[j]<<endl;
+                // cout<<sum<<" "<<code[i]<<" "<<code[j]<<endl;
                 sum=sum-code[i]+code[j-1];
                 
                 ans[j]=sum;
@@ -46,10 +46,6 @@ public:
             }
         }
 
-
-        for(auto ele : ans){
-            cout<<ele<<" ";
-        }
         return ans;
     }
 };
