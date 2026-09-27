@@ -9,7 +9,7 @@ public:
         int count=0;
         double avrg=sum/k;
         if(avrg>=threshold){
-            cout<<"y";
+            // cout<<"y";
             count++;
             // dec--;
         }
@@ -17,14 +17,14 @@ public:
         for(int i=k;i<arr.size();i++,j++){
             sum=sum-arr[j]+arr[i];
             avrg=sum/k;
-            cout<<avrg<<" ";
+            // cout<<avrg<<" ";
             if(avrg>=threshold){
                 count++;
                 // dec--;
             }
         }
 
-        cout<<count;
+        // cout<<count;
         return count;
 
     }
