@@ -12,7 +12,7 @@ public:
         for(int i=k;i<nums.size();i++,j++){
             sum=sum-nums[j]+nums[i];
             avrg=sum/k;
-            cout<<avrg<<" ";
+            // cout<<avrg<<" ";
             if(avrg>maxi){
                 maxi=avrg;
             }
