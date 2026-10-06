@@ -10,26 +10,26 @@ public:
         int count=0;
         int sum=0;
         int k=0;
+
+
+        // this is first window i.e statisfy the condition
         for(int i=0;i<s.size();i++){
             sum+=v[i];
             k=i;
             if(sum<=maxCost){
                 count++;
             }else{
-                // cout<<sum<<endl;
                 sum=sum-v[i];
                 break;
             }
-            
         }
-        
-        // for(auto ele : v) cout<<ele<<" ";
-        // cout<<"\n"<<k<<endl;
-        
+
         int j=0;
-       int i;
+        int i;
         int max_len=INT_MIN;
+
         if(max_len<count) max_len=count;
+
         for(i=k;i<v.size();i++){
             sum=sum+v[i];
             if(sum>maxCost){
@@ -37,14 +37,11 @@ public:
                 j++;
             }else{
                 count=i-j+1;
-                // cout<<"sum "<<sum<<" "<<i<<" "<<j<<endl; 
                 if(max_len<count) max_len=count;
             }
         }
 
-        if(max_len<count) max_len=count;
-
-        // cout<<"max :"<<max_len;
+        // if(max_len<count) max_len=count;
 
         return max_len;
     }
