@@ -16,15 +16,15 @@ public:
             if(sum<=maxCost){
                 count++;
             }else{
-                cout<<sum<<endl;
+                // cout<<sum<<endl;
                 sum=sum-v[i];
                 break;
             }
             
         }
         
-        for(auto ele : v) cout<<ele<<" ";
-        cout<<"\n"<<k<<endl;
+        // for(auto ele : v) cout<<ele<<" ";
+        // cout<<"\n"<<k<<endl;
         
         int j=0;
        int i;
@@ -44,7 +44,7 @@ public:
 
         if(max_len<count) max_len=count;
 
-        cout<<"max :"<<max_len;
+        // cout<<"max :"<<max_len;
 
         return max_len;
     }
