@@ -7,7 +7,7 @@ public:
 
         while(find==true && n>=4){
             if(n%4!=0) find=false;
-            cout<<n<<" ";
+            // cout<<n<<" ";
             n=n/4;
         }
 
