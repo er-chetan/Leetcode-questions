@@ -7,9 +7,7 @@ public:
         for(int i=0;i<s.size();i++){
             v[i]=abs(s[i]-t[i]);
         }
-        int count=0;
-        int sum=0;
-        int k=0;
+        int count=0,sum=0,k=0;
 
 
         // this is first window i.e statisfy the condition
@@ -24,9 +22,7 @@ public:
             }
         }
 
-        int j=0;
-        int i;
-        int max_len=INT_MIN;
+        int j=0,i,max_len=INT_MIN;
 
         if(max_len<count) max_len=count;
 
@@ -40,8 +36,6 @@ public:
                 if(max_len<count) max_len=count;
             }
         }
-
-        // if(max_len<count) max_len=count;
 
         return max_len;
     }
