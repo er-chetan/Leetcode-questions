@@ -32,10 +32,7 @@ public:
                 // continue;
             }
             
-            if(s[i]=='(' ) {
-                i++;
-                continue;
-            }else if(nod.size()>1 && s[i]==')'){
+            if(nod.size()>1 && s[i]==')'){
                 
                     TreeNode* child=nod.top();
                     nod.pop();
