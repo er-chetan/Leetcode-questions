@@ -27,7 +27,7 @@ public:
                     // cout<<num<<" ";
                 TreeNode* temp=new TreeNode(num);
                  nod.push(temp);
-                cout<<"size = "<<nod.size();
+                // cout<<"size = "<<nod.size();
                 str="";
                 // continue;
             }
@@ -40,7 +40,7 @@ public:
                     TreeNode* child=nod.top();
                     nod.pop();
                     TreeNode* parent=nod.top();
-                    cout<<"parent-> "<<parent->val<<" "<<"child ->"<<child->val<<endl;
+                    // cout<<"parent-> "<<parent->val<<" "<<"child ->"<<child->val<<endl;
                     if(parent->left==NULL){
                         parent->left=child;
                     }else {
@@ -54,7 +54,7 @@ public:
         // cout<<nod.top()->val;
         if(str!=""){ 
             int num=stoi(str);
-            cout<<num<<" ";
+            // cout<<num<<" ";
             TreeNode* temp=new TreeNode(num);
             nod.push(temp);
             str="";
