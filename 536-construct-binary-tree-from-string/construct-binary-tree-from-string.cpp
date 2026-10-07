@@ -24,40 +24,30 @@ public:
                 str=str+s[i];
             }else if(str!=""){
                 int num=stoi(str);
-                    // cout<<num<<" ";
                 TreeNode* temp=new TreeNode(num);
-                 nod.push(temp);
-                // cout<<"size = "<<nod.size();
+                nod.push(temp);
                 str="";
-                // continue;
             }
             
             if(nod.size()>1 && s[i]==')'){
-                
-                    TreeNode* child=nod.top();
-                    nod.pop();
-                    TreeNode* parent=nod.top();
-                    // cout<<"parent-> "<<parent->val<<" "<<"child ->"<<child->val<<endl;
-                    if(parent->left==NULL){
-                        parent->left=child;
-                    }else {
-                        parent->right=child;
-                    }
-                }
+                TreeNode* child=nod.top();
+                nod.pop();
+                TreeNode* parent=nod.top();
+                if(parent->left==NULL){
+                    parent->left=child;
+                }else{
+                    parent->right=child;
+                 }
+            }
             i++;
         }
 
-
-        // cout<<nod.top()->val;
         if(str!=""){ 
             int num=stoi(str);
-            // cout<<num<<" ";
             TreeNode* temp=new TreeNode(num);
             nod.push(temp);
             str="";
         }
-
-        
         
         return nod.top();
     }
