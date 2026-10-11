@@ -10,11 +10,8 @@ public:
                 num=num/10;
             }
 
-            // if(m.find(sum)==m.end()){
-                // m[sum].push_back(nums[i]);
-            // }else{
-                m[sum].push_back(nums[i]);
-            // }
+            m[sum].push_back(nums[i]);
+
         }
         int maxi=INT_MIN;
         for(auto ele : m){
