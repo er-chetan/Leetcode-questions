@@ -9,19 +9,28 @@ public:
                 sum+=(num%10);
                 num=num/10;
             }
-
-            m[sum].push_back(nums[i]);
+            // cout<<sum<<" ";
+            if(m[sum].size()!=2){
+                // cout<<"yes -> "<<sum<<" "<<nums[i]<<endl;
+                m[sum].push_back(nums[i]);
+            }else if(m[sum].size()==2){
+                sort(m[sum].begin(),m[sum].end());
+                if(m[sum][0]<nums[i]) m[sum][0]=nums[i];
+                // cout<<sum<<"="<<m[sum][0]<<" "<<m[sum][1]<<endl;
+            }
 
         }
         int maxi=INT_MIN;
         for(auto ele : m){
-            sort(ele.second.begin(),ele.second.end());
+            // sort(ele.second.begin(),ele.second.end());
 
             if(ele.second.size()>1){
-                int n=ele.second.size();
-                int sum=ele.second[n-1]+ele.second[n-2];
+                // cout<<ele.second[0]<<" "<<ele.second[1]<<endl;
+                int sum=ele.second[0]+ele.second[1];
                 if(sum>maxi) maxi=sum;
             }
+
+            
         }
 
         if(maxi!=INT_MIN) return maxi;
