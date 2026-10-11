@@ -29,8 +29,6 @@ public:
                 int sum=ele.second[0]+ele.second[1];
                 if(sum>maxi) maxi=sum;
             }
-
-            
         }
 
         if(maxi!=INT_MIN) return maxi;
