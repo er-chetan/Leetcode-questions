@@ -11,10 +11,10 @@ public:
         while(pq.size()>0){
             int num1=pq.top();
             pq.pop();
-            cout<<num1<<" ";
+            // cout<<num1<<" ";
             if(pq.size()>0){
                 int num2=pq.top();
-                cout<<num2;
+                // cout<<num2;
                 pq.pop();
                 num2--;
                 if(num2>0) pq.push(num2);
@@ -22,10 +22,10 @@ public:
             num1--;
             count++;
             if(num1>0) pq.push(num1);
-            cout<<endl;
+            // cout<<endl;
         }
 
-        cout<<count;
+        // cout<<count;
 
         return count;
     }
