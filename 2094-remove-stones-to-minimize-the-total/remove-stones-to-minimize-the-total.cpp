@@ -26,7 +26,7 @@ public:
             sum+=pq.top();
             pq.pop();
         }
-        cout<<sum;
+        // cout<<sum;
         return sum;
     }
 };
