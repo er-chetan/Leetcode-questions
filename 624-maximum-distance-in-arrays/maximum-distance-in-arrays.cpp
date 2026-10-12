@@ -32,7 +32,7 @@ public:
         }
 
         int result=max(abs(maxi-mini1),abs(maxi1-mini));
-        cout<<result;
+        // cout<<result;
         return result;
     }
 };
