@@ -3,24 +3,14 @@ public:
     int maximumGap(vector<int>& nums) {
         int n=nums.size();
         priority_queue<int> pq;
-        if(n<2){
-            return 0;
-        }
 
+        if(n<2) return 0;
+        if(n==2) return max((nums[0]-nums[1]),(nums[1]-nums[0]));
 
-        if(n==2){
-            return max((nums[0]-nums[1]),(nums[1]-nums[0]));
-        }
-
-        for(int i=0;i<n;i++){
-            pq.push(nums[i]);
-        }
-
-        // cout<<pq.size();
+        for(int i=0;i<n;i++) pq.push(nums[i]);
+    
         int maxi1=INT_MIN,maxi2=INT_MIN;
         int result=INT_MIN;
-        // int num3=pq.top();
-        // pq.pop();
         while(pq.size()>2){
             int num3=pq.top();
             pq.pop();
@@ -45,20 +35,8 @@ public:
             if(result<max(maxi1,maxi2)){
                 result=max(maxi1,maxi2);
             }
-
-            
-            // cout<<result<<" ";
         }
 
-
-        
-
-
         return result;
-
-
-
-
-        
     }
 };
