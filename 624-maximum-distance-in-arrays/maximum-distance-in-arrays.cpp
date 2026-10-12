@@ -22,6 +22,7 @@ public:
         }
 
         if(mini_idx!=maxi_idx) return abs(mini-maxi);
+        
         int maxi1=INT_MIN,mini1=INT_MAX;
         for(int i=0;i<n;i++){
             if(i==maxi_idx) continue;
