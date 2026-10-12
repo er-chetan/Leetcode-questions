@@ -13,7 +13,7 @@ class Solution {
 public:
 
     unordered_set<TreeNode*> s;
-TreeNode* correctBinaryTree(TreeNode* root) {
+    TreeNode* correctBinaryTree(TreeNode* root) {
         if (root == NULL){
             return NULL;
         }
