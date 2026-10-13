@@ -30,7 +30,8 @@ public:
 
         helper(root,0,0);
 
-        int check=INT_MIN,i=0;
+        int check=INT_MIN;
+        //  syntax of pair and vector traverse
         for(auto [pr,vec] : m){
             if(vec.size()>0){
                 sort(vec.begin(),vec.end());
@@ -41,12 +42,18 @@ public:
                 //     res[i-1].push_back(vec[r]);
                 // }
                 // use this instead of loop in 2d vector particular vector push back values of another vectot // we can say that push bacck whole vector in inner particular vector
-                res[i-1].insert(res[i-1].end(),vec.begin(),vec.end());
+                //    or
+                // res[i-1].insert(res[i-1].end(),vec.begin(),vec.end());
+                // or
+                int n=res.size();
+                res[n-1].insert(res[n-1].end(),vec.begin(),vec.end());
+
+
             }else{
                 
                 res.push_back(vec);
                 check=pr.first;
-                i++;
+                // i++;
             }
         }
         return res;
