@@ -22,11 +22,6 @@ public:
 
     void display(vector<pair<int,TreeNode*>> ans){
 
-        cout<<"before : "<<endl;
-        for(int i=0;i<ans.size();i++){
-            cout<<ans[i].first<<" ";
-        }
-
         int idx=-1;
 
         TreeNode* first_dec=NULL;
@@ -56,15 +51,10 @@ public:
         if(first_inc==NULL){
             first_inc=ans[idx+1].second;
         }
-        cout<<"after : "<<" val "<<first_dec->val<<" "<<first_inc->val;
+        // cout<<"after : "<<" val "<<first_dec->val<<" "<<first_inc->val;
         first_dec->val=first_inc->val;
         first_inc->val=num;
 
-        
-
-        // for(int i=0;i<ans.size();i++){
-        //     cout<<ans[i].first<<" ";
-        // }
 
         return;
     }
