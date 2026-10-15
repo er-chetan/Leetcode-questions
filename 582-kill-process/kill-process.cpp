@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> killProcess(vector<int>& pid, vector<int>& ppid, int kill) {
-        map<int,vector<int>> mp;
+        unordered_map<int,vector<int>> mp;
         vector<int> ans;
         ans.push_back(kill);
         int n=ppid.size();
