@@ -8,7 +8,6 @@ public:
         for(int i=0;i<n;i++){
             mp[ppid[i]].push_back(i);
         }
-        int val=kill;
         int i=0;
         while(i<ans.size()){
             if(mp.find(ans[i])!=mp.end()){
