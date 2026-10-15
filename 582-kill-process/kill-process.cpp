@@ -15,14 +15,10 @@ public:
                 auto it=mp[ans[i]];
 
                 for(auto ele : it){
-                    // cout<<ele<<" ";
-                    // 0
-                        ans.push_back(pid[ele]);
-                    // }
+                    ans.push_back(pid[ele]);
                 }
-            }else{
-                mp.erase(ans[i]);
             }
+            mp.erase(ans[i]);
             i++;
         }
 
