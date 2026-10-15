@@ -50,7 +50,7 @@ public:
         if(first_inc==NULL){
             first_inc=ans[idx+1].second;
         }
-        // cout<<"after : "<<" val "<<first_dec->val<<" "<<first_inc->val;
+        
         first_dec->val=first_inc->val;
         first_inc->val=num;
 
