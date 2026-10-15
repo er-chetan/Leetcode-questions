@@ -1,10 +1,21 @@
 class Solution {
 public:
-    int fib(int n) {
-        if(n==0) return 0;
-        if(n==2 || n==1){
-            return 1;
+    int fibonacci(int n,vector<int>& dp){
+        if(n<=1){
+            return n;
         }
-        return fib(n-2)+fib(n-1);
+
+        if(dp[n]!=-1){
+            return dp[n];
+        }
+
+        return dp[n]=fibonacci(n-1,dp)+fibonacci(n-2,dp);
+    }
+    int fib(int n) {
+        vector<int> dp(n+1,-1);
+
+        int result=fibonacci(n,dp);
+
+        return result;
     }
 };
