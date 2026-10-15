@@ -16,17 +16,16 @@ public:
 
                 for(auto ele : it){
                     // cout<<ele<<" ";
-                    if(mp.find(ans[i])!=mp.end()){
+                    // 0
                         ans.push_back(pid[ele]);
-                    }
+                    // }
                 }
+            }else{
+                mp.erase(ans[i]);
             }
             i++;
         }
 
-        // for(auto ele : ans){
-        //     cout<<ele<<" ";
-        // }
 
         return ans;
 
