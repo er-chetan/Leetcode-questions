@@ -13,7 +13,6 @@ public:
         while(i<ans.size()){
             if(mp.find(ans[i])!=mp.end()){
                 auto it=mp[ans[i]];
-
                 for(auto ele : it){
                     ans.push_back(pid[ele]);
                 }
