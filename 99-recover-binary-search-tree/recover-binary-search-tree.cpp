@@ -40,7 +40,6 @@ public:
         for(int j=i+1;j<n-1;j++){
             if(ans[j].first>ans[j+1].first){
                 first_inc=ans[j+1].second;
-                
                 break;
             }
         }
@@ -63,7 +62,6 @@ public:
         helper(root);
         display(ans);
         return ;
-
     }
 
     
