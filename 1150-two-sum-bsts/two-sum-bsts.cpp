@@ -11,31 +11,33 @@
  */
 class Solution {
 public:
-    set<int> s;
     bool find=false;
-    void helper(TreeNode* root1){
-        if(root1==NULL) return ;
-
-        helper(root1->left);
-        s.insert(root1->val);
-        helper(root1->right);
-    }
-    void match(TreeNode* root2,int target){
+    void match(TreeNode* root2,int val,int target){
         if(root2==NULL) return;
 
-        match(root2->left,target);
-        if(s.find(target-root2->val)!=s.end()){
+        if(target-val==root2->val){
             find=true;
-            return;
+            return ;
         }
-        match(root2->right,target);
+        else if(target-val<root2->val){
+           match(root2->left,val,target);
+        }else{
+            match(root2->right,val,target);
+        }
 
     }
+    void helper(TreeNode* root2, TreeNode* root1, int target){
+        if(root1==NULL) return;
+        match(root2,root1->val,target);
+        helper(root2,root1->left,target);
+        helper(root2,root1->right,target);
+    }
     bool twoSumBSTs(TreeNode* root1, TreeNode* root2, int target) {
-        helper(root1);
-        match(root2,target);
+       
+       helper(root2,root1,target);
 
 
-        return find;
+        return  find;
+
     }
 };
