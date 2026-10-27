@@ -25,7 +25,6 @@ public:
        }
         
         if(root->left==NULL && root->right==NULL){
-        //    str.push_back(')');
            return;
         }else if(root->left==NULL && root->right!=NULL){
             str.push_back('(');
