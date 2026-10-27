@@ -13,7 +13,7 @@ class Solution {
 public:
     string str;
     void helper(TreeNode* root){
-        if(root==NULL) return ;
+        // if(root==NULL) return ;
 
        if(root->val<0){
         str.push_back('-');
@@ -44,17 +44,9 @@ public:
             str.push_back(')');
         }
 
-        
-
-        // cout<<str<<endl;
     }
     string tree2str(TreeNode* root) {
-        // str.push_back(root->val+'0');
         helper(root);
-
-        // cout<<"string :"<<str;
         return str;
-
-
     }
 };
