@@ -13,7 +13,7 @@ class Solution {
 public:
     string str;
     void helper(TreeNode* root){
-        // if(root==NULL) return ;
+        if(root==NULL) return ;
 
        if(root->val<0){
         str.push_back('-');
