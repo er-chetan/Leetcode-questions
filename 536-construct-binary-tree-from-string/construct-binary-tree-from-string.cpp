@@ -23,7 +23,6 @@ public:
             if(isdigit(s[i]) || s[i]=='-'){
                 str=str+s[i];
             }else if(str!=""){
-                // int num=stoi(str);
                 TreeNode* temp=new TreeNode(stoi(str));
                 nod.push(temp);
                 str="";
@@ -43,7 +42,6 @@ public:
         }
 
         if(str!=""){ 
-            // int num=stoi(str);
             TreeNode* temp=new TreeNode(stoi(str));
             nod.push(temp);
         }
