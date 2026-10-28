@@ -36,7 +36,7 @@ public:
                     parent->left=child;
                 }else{
                     parent->right=child;
-                 }
+                }
             }
             i++;
         }
